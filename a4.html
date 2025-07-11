@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recrutia - Smart Recruitment Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1e40af',
+                        accent: '#10b981',
+                        dark: '#1f2937',
+                        light: '#f9fafb'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        }
+        
+        .industry-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .industry-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .step-card {
+            transition: all 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .client-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="flex items-center">
+                    <i class="fas fa-robot text-3xl text-primary mr-2"></i>
+                    <span class="text-xl font-bold text-dark">AI Recrutia</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="nav-link text-gray-700 hover:text-primary">Home</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-primary">Services</a>
+                <a href="#industries" class="nav-link text-gray-700 hover:text-primary">Industries</a>
+                <a href="#employers" class="nav-link text-gray-700 hover:text-primary">For Employers</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-primary">About</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-primary">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <a href="#book-call" class="hidden md:block bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg font-medium transition duration-300">
+                    Book a Call
+                </a>
+                <button class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white py-2 px-4 shadow-md">
+            <a href="#" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:text-primary">Services</a>
+            <a href="#industries" class="block py-2 text-gray-700 hover:text-primary">Industries</a>
+            <a href="#employers" class="block py-2 text-gray-700 hover:text-primary">For Employers</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-primary">About</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-primary">Contact</a>
+            <a href="#book-call" class="block bg-primary text-white px-4 py-2 rounded-lg font-medium my-2 text-center">
+                Book a Call
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Premium Recruitment Solutions</h1>
+                <p class="text-xl mb-8">Exceptional talent matching with personalized career support. Our premium services combine expert recruiters with proven methodologies to connect the right talent with the right opportunities.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#" class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold text-center transition duration-300">
+                        Find Your Dream Job
+                    </a>
+                    <a href="#employers" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary px-6 py-3 rounded-lg font-semibold text-center transition duration-300">
+                        Hire Top Talent
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="AI Recruitment" class="rounded-xl shadow-2xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="bg-gray-100 py-10">
+        <div class="container mx-auto px-4">
+            <h3 class="text-center text-gray-500 mb-8 font-medium">TRUSTED BY INDUSTRY LEADERS</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                <img src="https://logo.clearbit.com/kroger.com" alt="Kroger" class="client-logo h-12 mx-auto">
+                <img src="https://logo.clearbit.com/7-eleven.com" alt="7-Eleven" class="client-logo h-12 mx-auto">
+                <img src="https://logo.clearbit.com/sysco.com" alt="Sysco" class="client-logo h-12 mx-auto">
+                <img src="https://logo.clearbit.com/walmart.com" alt="Walmart" class="client-logo h-12 mx-auto">
+                <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="client-logo h-12 mx-auto">
+                <img src="https://logo.clearbit.com/target.com" alt="Target" class="client-logo h-12 mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-white" id="services">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Your 3-Step Journey to Success</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Our streamlined process makes finding the perfect job or candidate effortless and efficient.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="step-card bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user-plus text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">1. Register Your Profile</h3>
+                    <p class="text-gray-600">Create your comprehensive profile in minutes. Our AI analyzes your skills, experience, and preferences to understand your perfect match.</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">2. Get AI-Matched</h3>
+                    <p class="text-gray-600">Our proprietary algorithm scans thousands of opportunities to find the best matches based on compatibility scores and success predictors.</p>
+                </div>
+                
+                <div class="step-card bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">3. Interview & Get Placed</h3>
+                    <p class="text-gray-600">Our career coaches prepare you for interviews and negotiate the best offers on your behalf. Start your new role with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Grid -->
+    <section class="py-16 bg-gray-50" id="industries">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">We Serve 24+ Industries</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">From healthcare to logistics, we have specialized recruitment solutions for every sector.</p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Industry 1 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-user-md text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Healthcare</h4>
+                </div>
+                
+                <!-- Industry 2 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-laptop-code text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Information Technology</h4>
+                </div>
+                
+                <!-- Industry 3 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-store text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Retail</h4>
+                </div>
+                
+                <!-- Industry 4 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-truck text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Logistics</h4>
+                </div>
+                
+                <!-- Industry 5 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-utensils text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Hospitality</h4>
+                </div>
+                
+                <!-- Industry 6 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-chart-line text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Finance</h4>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#all-industries" class="text-primary font-medium hover:underline">View all 24+ industries <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">Why AI Recrutia Stands Out</h2>
+                    <p class="text-gray-600 mb-8">We combine cutting-edge technology with human expertise to deliver recruitment solutions that actually work.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
+                                <i class="fas fa-bolt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">AI-Powered Matching</h4>
+                                <p class="text-gray-600">Our algorithms analyze thousands of data points to find matches with 92% accuracy.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
+                                <i class="fas fa-user-tie text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Dedicated Career Coaches</h4>
+                                <p class="text-gray-600">Every candidate gets personalized support from application to offer.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
+                                <i class="fas fa-shield-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Quality Guarantee</h4>
+                                <p class="text-gray-600">90-day replacement guarantee for all placed candidates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <h3 class="text-xl font-semibold mb-6">Ready to transform your career or hiring process?</h3>
+                        
+                        <div class="space-y-4">
+                            <a href="#" class="block bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium text-center transition duration-300">
+                                <i class="fas fa-user-plus mr-2"></i> Create Candidate Profile
+                            </a>
+                            
+                            <a href="#employers" class="block bg-white border border-primary text-primary hover:bg-gray-50 px-6 py-3 rounded-lg font-medium text-center transition duration-300">
+                                <i class="fas fa-building mr-2"></i> Employer Services
+                            </a>
+                            
+                            <a href="#book-call" class="block bg-accent hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium text-center transition duration-300">
+                                <i class="fas fa-calendar-alt mr-2"></i> Book a Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Employers -->
+    <section class="py-16 bg-gray-50" id="employers">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Smart Hiring Solutions for Employers</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Reduce hiring time by 60% while improving candidate quality with our AI-driven recruitment platform.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-xl font-semibold mb-4">Talent Sourcing</h3>
+                    <p class="text-gray-600 mb-6">Access our database of pre-vetted, AI-matched candidates across all industries and skill levels.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                            <span>Automated candidate matching</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                            <span>Skills and culture fit analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                            <span>Diversity and inclusion filters</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-xl font-semibold mb-4">Interview Coordination</h3>
+                    <p class="text-gray-600 mb-6">We handle all scheduling, screening, and preliminary interviews to save you time.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                            <span>Automated interview scheduling</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                            <span>Structured interview guides</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                            <span>Video interview capabilities</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                    <h3 class="text-xl font-semibold mb-4">Hiring Analytics</h3>
+                    <p class="text-gray-600 mb-6">Data-driven insights to optimize your hiring process and predict candidate success.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                            <span>Time-to-hire metrics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                            <span>Candidate success predictors</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-accent mt-1 mr-2"></i>
+                            <span>Diversity and inclusion reports</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 max-w-4xl mx-auto text-center">
+                <h3 class="text-xl font-semibold mb-6">Premium Recruitment Services</h3>
+                <p class="text-gray-600 mb-8">We offer tailored recruitment solutions designed for your specific needs. Contact us to discuss how we can support your hiring goals.</p>
+                <a href="#contact" class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium inline-block transition duration-300">
+                    Contact Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Success Stories</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">Registered Nurse</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"AI Recrutia matched me with a hospital that perfectly fit my skills and values. My career coach helped me negotiate a 15% higher salary than I expected. I couldn't be happier!"</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mr-4">
+                            <i class="fas fa-building text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">CTO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"We reduced our engineering hiring time from 8 weeks to 2 weeks using AI Recrutia. The quality of candidates was exceptional, and we've seen a 40% reduction in early turnover."</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="faq-item bg-white p-6 rounded-lg border border-gray-200">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="font-semibold">How does your matching process work?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p>Our experienced recruiters conduct thorough evaluations of both candidates and job requirements, considering skills, experience, cultural fit, and long-term potential. We use proven methodologies combined with deep industry knowledge to identify the best matches for each position.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white p-6 rounded-lg border border-gray-200">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="font-semibold">Is there a cost for job seekers?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p>No, our services are completely free for job seekers. We're compensated by employers when we successfully place candidates. Our career coaching and interview preparation services are also included at no cost to candidates.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white p-6 rounded-lg border border-gray-200">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="font-semibold">What industries do you specialize in?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p>We serve 24+ industries including healthcare, information technology, retail, logistics, hospitality, finance, manufacturing, education, and more. Our industry-specific recruiters have deep knowledge of each sector's unique hiring needs and challenges.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white p-6 rounded-lg border border-gray-200">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="font-semibold">How long does the hiring process take?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p>For candidates, the average time from registration to job offer is 3-4 weeks. For employers, we typically present qualified candidates within 5 business days of receiving a job description, and the entire hiring process averages 2-3 weeks depending on interview scheduling.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white p-6 rounded-lg border border-gray-200">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="font-semibold">What's your candidate replacement policy?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="mt-3 text-gray-600 hidden">
+                        <p>We offer a 90-day guarantee on all placements. If a candidate leaves or is terminated within 90 days, we'll find a replacement at no additional cost. This demonstrates our confidence in the quality of our matches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-white" id="about">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+                    <p class="text-xl font-medium text-primary mb-6">"Premium recruitment services — delivering exceptional results."</p>
+                    <p class="text-gray-600 mb-6">At AI Recrutia, we combine deep industry expertise with personalized service to deliver premium recruitment solutions.</p>
+                    <p class="text-gray-600 mb-6">Founded in 2018 by recruitment veterans, we've helped over 15,000 candidates find fulfilling careers and supported 500+ companies in building exceptional teams through our premium services.</p>
+                    <p class="text-gray-600">Our approach reduces unconscious bias in hiring while ensuring candidates and employers connect based on what truly matters for long-term success.</p>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <h3 class="text-xl font-semibold mb-6">Our Values</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
+                                    <i class="fas fa-heart text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Human-Centered</h4>
+                                    <p class="text-gray-600">Technology serves people, not the other way around.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
+                                    <i class="fas fa-lightbulb text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Innovative</h4>
+                                    <p class="text-gray-600">We continuously improve our methods through research and feedback.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
+                                    <i class="fas fa-balance-scale text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Equitable</h4>
+                                    <p class="text-gray-600">We're committed to creating diverse and inclusive workplaces.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
+                                    <i class="fas fa-hand-holding-heart text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Supportive</h4>
+                                    <p class="text-gray-600">We're with you every step of the journey, from application to onboarding.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Industries -->
+    <section class="py-16 bg-gray-50 hidden" id="all-industries">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">All Industries We Serve</h2>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Industry 1 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-user-md text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Healthcare</h4>
+                </div>
+                
+                <!-- Industry 2 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-laptop-code text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Information Technology</h4>
+                </div>
+                
+                <!-- Industry 3 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-store text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Retail</h4>
+                </div>
+                
+                <!-- Industry 4 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-truck text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Logistics</h4>
+                </div>
+                
+                <!-- Industry 5 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-utensils text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Hospitality</h4>
+                </div>
+                
+                <!-- Industry 6 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-chart-line text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Finance</h4>
+                </div>
+                
+                <!-- Industry 7 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-industry text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Manufacturing</h4>
+                </div>
+                
+                <!-- Industry 8 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-graduation-cap text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Education</h4>
+                </div>
+                
+                <!-- Industry 9 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-home text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Real Estate</h4>
+                </div>
+                
+                <!-- Industry 10 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-paint-brush text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Creative Arts</h4>
+                </div>
+                
+                <!-- Industry 11 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-leaf text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Agriculture</h4>
+                </div>
+                
+                <!-- Industry 12 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-plane text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Aviation</h4>
+                </div>
+                
+                <!-- Industry 13 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-ship text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Maritime</h4>
+                </div>
+                
+                <!-- Industry 14 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-warehouse text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Warehousing</h4>
+                </div>
+                
+                <!-- Industry 15 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-car text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Automotive</h4>
+                </div>
+                
+                <!-- Industry 16 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-tshirt text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Fashion</h4>
+                </div>
+                
+                <!-- Industry 17 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-phone text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Telecommunications</h4>
+                </div>
+                
+                <!-- Industry 18 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-flask text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Pharmaceuticals</h4>
+                </div>
+                
+                <!-- Industry 19 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-dumbbell text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Fitness</h4>
+                </div>
+                
+                <!-- Industry 20 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-robot text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Robotics</h4>
+                </div>
+                
+                <!-- Industry 21 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-solar-panel text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Renewable Energy</h4>
+                </div>
+                
+                <!-- Industry 22 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-building text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Construction</h4>
+                </div>
+                
+                <!-- Industry 23 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-utensils text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Food Service</h4>
+                </div>
+                
+                <!-- Industry 24 -->
+                <div class="industry-icon bg-white p-6 rounded-xl shadow-sm border border-gray-200 text-center">
+                    <i class="fas fa-headset text-3xl text-primary mb-3"></i>
+                    <h4 class="font-medium">Customer Service</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white" id="contact">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+                    <p class="text-gray-600 mb-8">Have questions about our services or ready to get started? Reach out to our team—we're happy to help!</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Our Office</h4>
+                                <p class="text-gray-600">591 Summit Ave, Suite 400<br>Jersey City, NJ 07306</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Call Us</h4>
+                                <p class="text-gray-600">+91-XXX-XXX-XXXX</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Email Us</h4>
+                                <p class="text-gray-600">hello@airecrutia.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Working Hours</h4>
+                                <p class="text-gray-600">Monday - Friday: 9am - 6pm EST<br>Saturday: 10am - 2pm EST</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <h3 class="text-xl font-semibold mb-6">Send Us a Message</h3>
+                        
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <select id="subject" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary">
+                                    <option value="">Select a subject</option>
+                                    <option value="job-seeker">Job Seeker Inquiry</option>
+                                    <option value="employer">Employer Services</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                                <textarea id="message" rows="4" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book a Call -->
+    <section class="py-16 bg-primary text-white" id="book-call">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Hiring or Career?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Schedule a free 30-minute consultation with one of our recruitment experts to discuss your specific needs.</p>
+                
+                <div class="bg-white rounded-xl p-8 shadow-lg max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-semibold text-dark mb-6">Book Your Consultation</h3>
+                    
+                    <form class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="book-name" class="block text-gray-700 mb-2 text-left">Your Name</label>
+                            <input type="text" id="book-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary text-gray-700">
+                        </div>
+                        
+                        <div>
+                            <label for="book-email" class="block text-gray-700 mb-2 text-left">Email Address</label>
+                            <input type="email" id="book-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary text-gray-700">
+                        </div>
+                        
+                        <div>
+                            <label for="book-phone" class="block text-gray-700 mb-2 text-left">Phone Number</label>
+                            <input type="tel" id="book-phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary text-gray-700">
+                        </div>
+                        
+                        <div>
+                            <label for="book-role" class="block text-gray-700 mb-2 text-left">You Are</label>
+                            <select id="book-role" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary text-gray-700">
+                                <option value="candidate">Job Seeker</option>
+                                <option value="employer">Employer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <label for="book-date" class="block text-gray-700 mb-2 text-left">Preferred Date & Time</label>
+                            <input type="datetime-local" id="book-date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary text-gray-700">
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <button type="submit" class="w-full bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                                Schedule Consultation
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="#" class="flex items-center mb-6">
+                        <i class="fas fa-robot text-3xl text-primary mr-2"></i>
+                        <span class="text-xl font-bold">AI Recrutia</span>
+                    </a>
+                    <p class="text-gray-400 mb-4">Recruitment made smarter — with people at the center.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">For Candidates</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Browse Jobs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Create Profile</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Career Resources</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Salary Calculator</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Success Stories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">For Employers</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Post a Job</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Browse Candidates</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pricing Plans</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Hiring Resources</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Employer Login</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 AI Recrutia. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('header button').addEventListener('click', function() {
+            const mobileMenu = document.querySelector('.md\\:hidden.hidden');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const button = item.querySelector('button');
+            button.addEventListener('click', () => {
+                const content = item.querySelector('div:last-child');
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.querySelector('.md\\:hidden.hidden');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Show all industries when clicking "View all 24+ industries"
+        document.querySelector('a[href="#all-industries"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('all-industries').classList.remove('hidden');
+            document.getElementById('all-industries').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

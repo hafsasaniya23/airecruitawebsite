@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recruit - Connecting Talent with Opportunities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for elements that need more styling than Tailwind provides */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+        
+        .industry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-blue-600">AI Recruit</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</button>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">About Us</button>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                            Industries <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute hidden mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Healthcare</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">IT & Tech</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Construction</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Retail</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Manufacturing</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Logistics</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">View All Industries</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                            Jobs <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute hidden mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Search Jobs</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Submit Resume</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Featured Openings</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                            Job Seekers <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute hidden mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Create Profile</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Career Guidance</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Interview Tips</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Upload Resume</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                            Employers <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute hidden mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Request Talent</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Our Process</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Client Testimonials</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">How It Works</button>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">FAQ</button>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact Us</button>
+                    </div>
+                    
+                    <div class="dropdown relative">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                            Login/Register <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute hidden right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Job Seeker Login</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Employer Login</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Register</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Home</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">About Us</a>
+                
+                <div class="relative">
+                    <button class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 flex justify-between items-center">
+                        Industries <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="pl-4 hidden">
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Healthcare</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">IT & Tech</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Construction</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Retail</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Manufacturing</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Logistics</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">View All</a>
+                    </div>
+                </div>
+                
+                <!-- Other mobile menu items would follow the same pattern -->
+                <!-- For brevity, I've omitted them but they would be similar to the Industries dropdown -->
+                
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Contact Us</a>
+                
+                <div class="relative">
+                    <button class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 flex justify-between items-center">
+                        Login/Register <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="pl-4 hidden">
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Job Seeker Login</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Employer Login</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 py-20 md:py-32">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Connecting Talent with <span class="text-yellow-300">Opportunity</span></h1>
+                    <p class="text-xl mb-8">AI Recruit bridges the gap between exceptional talent and forward-thinking companies across diverse industries.</p>
+                    
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <a href="#" class="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                            I'm Hiring Talent <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#" class="bg-yellow-400 text-gray-800 hover:bg-yellow-300 px-6 py-3 rounded-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                            I Need a Job <i class="fas fa-search ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg font-medium transition duration-300">
+                            <i class="far fa-calendar-alt mr-2"></i> Schedule Meeting
+                        </a>
+                        <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg font-medium transition duration-300">
+                            <i class="fas fa-file-upload mr-2"></i> Submit Staffing Request
+                        </a>
+                        <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-lg font-medium transition duration-300">
+                            <i class="fas fa-search mr-2"></i> Find Jobs
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Recruitment" class="rounded-xl shadow-2xl floating-button">
+                    <div class="absolute -bottom-5 -left-5 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-headset text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Call us anytime</p>
+                                <p class="font-bold text-blue-600">+1 201-777-1891</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trusted By Section -->
+    <div class="bg-gray-50 py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-center text-gray-500 text-sm uppercase font-semibold mb-8">Trusted by leading companies across the USA</h2>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <img src="https://via.placeholder.com/120x40?text=Company+1" alt="Company Logo" class="h-8 opacity-70 hover:opacity-100 transition">
+                <img src="https://via.placeholder.com/120x40?text=Company+2" alt="Company Logo" class="h-8 opacity-70 hover:opacity-100 transition">
+                <img src="https://via.placeholder.com/120x40?text=Company+3" alt="Company Logo" class="h-8 opacity-70 hover:opacity-100 transition">
+                <img src="https://via.placeholder.com/120x40?text=Company+4" alt="Company Logo" class="h-8 opacity-70 hover:opacity-100 transition">
+                <img src="https://via.placeholder.com/120x40?text=Company+5" alt="Company Logo" class="h-8 opacity-70 hover:opacity-100 transition">
+            </div>
+        </div>
+    </div>
+
+    <!-- Industries Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Industries We Serve</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">From healthcare to technology, we specialize in connecting talent with opportunities across diverse sectors.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-10">
+                <a href="#" class="industry-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-blue-200 transition duration-300 cursor-pointer text-center">
+                    <div class="text-4xl mb-3">🩺</div>
+                    <h3 class="font-semibold text-gray-800">Healthcare</h3>
+                </a>
+                
+                <a href="#" class="industry-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-blue-200 transition duration-300 cursor-pointer text-center">
+                    <div class="text-4xl mb-3">🏗️</div>
+                    <h3 class="font-semibold text-gray-800">Construction</h3>
+                </a>
+                
+                <a href="#" class="industry-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-blue-200 transition duration-300 cursor-pointer text-center">
+                    <div class="text-4xl mb-3">💻</div>
+                    <h3 class="font-semibold text-gray-800">IT & Tech</h3>
+                </a>
+                
+                <a href="#" class="industry-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-blue-200 transition duration-300 cursor-pointer text-center">
+                    <div class="text-4xl mb-3">🏬</div>
+                    <h3 class="font-semibold text-gray-800">Retail & Sales</h3>
+                </a>
+                
+                <a href="#" class="industry-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-blue-200 transition duration-300 cursor-pointer text-center">
+                    <div class="text-4xl mb-3">⚙️</div>
+                    <h3 class="font-semibold text-gray-800">Manufacturing</h3>
+                </a>
+                
+                <a href="#" class="industry-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-blue-200 transition duration-300 cursor-pointer text-center">
+                    <div class="text-4xl mb-3">📦</div>
+                    <h3 class="font-semibold text-gray-800">Logistics</h3>
+                </a>
+                
+                <a href="#" class="industry-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-blue-200 transition duration-300 cursor-pointer text-center">
+                    <div class="text-4xl mb-3">👨‍🍳</div>
+                    <h3 class="font-semibold text-gray-800">Hospitality</h3>
+                </a>
+                
+                <a href="#" class="industry-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-blue-200 transition duration-300 cursor-pointer text-center">
+                    <div class="text-4xl mb-3">🎨</div>
+                    <h3 class="font-semibold text-gray-800">Creative</h3>
+                </a>
+                
+                <a href="#" class="industry-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-blue-200 transition duration-300 cursor-pointer text-center">
+                    <div class="text-4xl mb-3">👩‍🏫</div>
+                    <h3 class="font-semibold text-gray-800">Education</h3>
+                </a>
+                
+                <a href="#" class="industry-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-blue-200 transition duration-300 cursor-pointer text-center">
+                    <div class="text-4xl mb-3">📞</div>
+                    <h3 class="font-semibold text-gray-800">Customer Support</h3>
+                </a>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition duration-300">
+                    View More Industries <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="counter mb-2" data-target="12500">0</div>
+                    <p class="text-gray-600">Job Vacancies</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="counter mb-2" data-target="9800">0</div>
+                    <p class="text-gray-600">People Hired</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="counter mb-2" data-target="100">0</div>
+                    <p class="text-gray-600">% Satisfied Users</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="counter mb-2" data-target="150">0</div>
+                    <p class="text-gray-600">Team Experts</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Choose AI Recruit?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our unique approach to recruitment delivers exceptional results for both job seekers and employers.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Expert Agents</h3>
+                    <p class="text-gray-600">Our recruitment specialists have deep industry knowledge and a proven track record of successful placements.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-medal text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Quality Standards</h3>
+                    <p class="text-gray-600">We maintain rigorous screening processes to ensure only the most qualified candidates are presented.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Certified Methods</h3>
+                    <p class="text-gray-600">Our recruitment methodologies are certified and continuously improved to deliver optimal results.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Comprehensive Recruitment Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Tailored to Your Needs</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">We provide end-to-end recruitment solutions</h3>
+                        <p class="text-gray-600 mb-6">Designed to connect the right talent with the right opportunities. From job placement and career counseling to skill development and interview preparation — we support you at every stage of the hiring journey.</p>
+                        <p class="text-gray-600 mb-6">Whether you're looking for your first job or your next team member, we're here to help. From career guidance to job placement and interview coaching, we make hiring personal and effective.</p>
+                        <a href="#" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+                            Learn More About Our Services
+                        </a>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
+                        <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Recruitment Services" class="rounded-lg shadow-md">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">How We Help You Get Hired</h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our streamlined process makes finding your dream job simple and efficient.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-blue-600">
+                    <div class="text-4xl font-bold text-blue-600 mb-4">01</div>
+                    <h4 class="text-xl font-semibold mb-3">Register & Tell Us About Yourself</h4>
+                    <p class="text-gray-600">Create your free profile and share your experience, skills, and job preferences. We want to know your goals — not just your resume.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-blue-600">
+                    <div class="text-4xl font-bold text-blue-600 mb-4">02</div>
+                    <h4 class="text-xl font-semibold mb-3">Get Matched with the Right Jobs</h4>
+                    <p class="text-gray-600">Our recruitment experts handpick roles that fit your strengths and aspirations — no guesswork, no wasted time.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-blue-600">
+                    <div class="text-4xl font-bold text-blue-600 mb-4">03</div>
+                    <h4 class="text-xl font-semibold mb-3">Interview & Get Placed</h4>
+                    <p class="text-gray-600">We schedule interviews, offer prep tips, and stay with you until you're placed — and even after, for ongoing support.</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-center shadow-lg transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-search mr-2"></i> Search Jobs
+                </a>
+                <a href="#" class="bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-center shadow-lg transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-users mr-2"></i> Hire Talent
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Success Stories</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from candidates and companies who found success through AI Recruit.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"AI Recruit understood exactly what I was looking for in my next career move. They matched me with a company that aligned perfectly with my skills and values. The entire process was smooth and professional."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Sarah J.</h4>
+                            <p class="text-sm text-gray-600">Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"As a growing tech startup, we needed specialized talent quickly. AI Recruit delivered exceptional candidates in record time. Their understanding of our industry and culture fit requirements was impressive."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Michael T.</h4>
+                            <p class="text-sm text-gray-600">CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="gradient-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Take the Next Step?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Whether you're looking for talent or your next career opportunity, we're here to help you succeed.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#" class="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-user-tie mr-2"></i> I'm an Employer
+                </a>
+                <a href="#" class="bg-yellow-400 text-gray-800 hover:bg-yellow-300 px-8 py-4 rounded-lg font-semibold shadow-lg transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-user mr-2"></i> I'm a Job Seeker
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">AI Recruit</h3>
+                    <p class="text-gray-400 mb-4">Connecting exceptional talent with forward-thinking companies across diverse industries.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Industries</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Jobs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">For Job Seekers</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Create Profile</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Search Jobs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Career Guidance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Interview Tips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Upload Resume</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <address class="not-italic text-gray-400">
+                        <p class="mb-3"><i class="fas fa-map-marker-alt mr-2 text-blue-400"></i> 591 Summit Ave Suite 400<br>Jersey City, New Jersey 07306</p>
+                        <p class="mb-3"><i class="fas fa-phone-alt mr-2 text-blue-400"></i> +1 201-777-1891</p>
+                        <p class="mb-3"><i class="fas fa-envelope mr-2 text-blue-400"></i> info@airecruit.com</p>
+                        <p><i class="fas fa-clock mr-2 text-blue-400"></i> Mon-Fri: 9AM - 6PM</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 AI Recruit. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if(count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // Start counters when scrolled to
+        window.addEventListener('scroll', function() {
+            const counterSection = document.querySelector('.bg-gray-50');
+            const counterSectionTop = counterSection.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if(counterSectionTop < windowHeight - 100) {
+                animateCounters();
+                // Remove the event listener after firing once
+                window.removeEventListener('scroll', arguments.callee);
+            }
+        });
+        
+        // Initialize counters to 0
+        document.addEventListener('DOMContentLoaded', function() {
+            counters.forEach(counter => {
+                counter.innerText = '0';
+            });
+        });
+    </script>
+</body>
+</html>

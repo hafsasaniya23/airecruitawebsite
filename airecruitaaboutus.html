@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About AIrecuita</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .counter {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #2563eb;
+    }
+    .testimonial {
+      background-color: #f9f9f9;
+      border-left: 4px solid #3b82f6;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0.5rem;
+    }
+    .testimonial .author {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      color: #1e3a8a;
+    }
+    .social-carousel {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+    .social-carousel iframe {
+      scroll-snap-align: center;
+      min-width: 300px;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-up {
+    animation: fade-up 1s ease-out forwards;
+  }
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animate-pulse-slow {
+    animation: pulse 6s infinite ease-in-out;
+  }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans leading-relaxed">
+
+<!-- Header -->
+<section class="relative bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 text-white py-28 overflow-hidden shadow-lg">
+  <!-- Subtle background pattern -->
+  <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fade-up drop-shadow-md">
+      Welcome to <span class="text-yellow-400">AIrecuita</span>
+    </h1>
+    <p class="text-2xl md:text-3xl font-medium text-gray-200 mb-4 animate-fade-up delay-100">
+      Building Careers with <span class="text-blue-300">Empathy</span> & <span class="text-pink-300">Intelligence</span>
+    </p>
+    <p class="text-lg md:text-xl max-w-3xl mx-auto animate-fade-up delay-200 text-gray-300">
+      Revolutionizing recruitment by blending the brilliance of artificial intelligence with the warmth of human insight.
+    </p>
+  </div>
+
+  <!-- Floating animated background elements -->
+  <div class="absolute top-10 right-10 w-40 h-40 bg-blue-400 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+  <div class="absolute bottom-10 left-10 w-60 h-60 bg-pink-500 rounded-full blur-2xl opacity-20 animate-pulse-slow"></div>
+</section>
+
+<!-- Mission -->
+<!-- Our Mission -->
+<section class="py-20 bg-gradient-to-b from-blue-50 to-white text-gray-800 fade-in">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <div class="mb-10">
+      <h2 class="text-5xl font-bold text-blue-800 mb-4">Our Mission</h2>
+      <p class="text-xl italic text-blue-600">"Recruitment made smarter — with people at the center."</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10 text-left mt-10">
+      <div class="flex items-start space-x-4">
+        <i class="fas fa-brain text-4xl text-blue-600"></i>
+        <div>
+          <h4 class="text-xl font-semibold mb-2">AI + Human Empathy</h4>
+          <p>We blend cutting-edge artificial intelligence with the emotional intelligence of experienced recruiters to match talent with purpose.</p>
+        </div>
+      </div>
+      <div class="flex items-start space-x-4">
+        <i class="fas fa-user-check text-4xl text-blue-600"></i>
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Candidate-First Approach</h4>
+          <p>Every decision we make is grounded in candidate well-being, growth, and career satisfaction.</p>
+        </div>
+      </div>
+      <div class="flex items-start space-x-4">
+        <i class="fas fa-users text-4xl text-blue-600"></i>
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Empowering Organizations</h4>
+          <p>We enable companies to build diverse, forward-thinking teams that drive innovation and culture.</p>
+        </div>
+      </div>
+      <div class="flex items-start space-x-4">
+        <i class="fas fa-rocket text-4xl text-blue-600"></i>
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Future-Ready Recruitment</h4>
+          <p>Our mission is to transform hiring into a meaningful, bias-free experience — ready for tomorrow’s challenges.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Values -->
+<!-- Our Values -->
+<section class="py-20 bg-white text-gray-800 fade-in">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-5xl font-bold text-blue-800 mb-12">Our Core Values</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+        <div class="text-blue-600 text-4xl mb-4">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-2">Human-Centered</h4>
+        <p class="text-gray-600 text-sm">People are at the core of everything we do — technology serves them, not the other way around.</p>
+      </div>
+
+      <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+        <div class="text-blue-600 text-4xl mb-4">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-2">Innovative Thinking</h4>
+        <p class="text-gray-600 text-sm">We continuously evolve by exploring new tools, trends, and ideas that redefine recruitment.</p>
+      </div>
+
+      <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+        <div class="text-blue-600 text-4xl mb-4">
+          <i class="fas fa-balance-scale"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-2">Integrity & Equity</h4>
+        <p class="text-gray-600 text-sm">We champion transparency and inclusivity to ensure every voice has a seat at the table.</p>
+      </div>
+
+      <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+        <div class="text-blue-600 text-4xl mb-4">
+          <i class="fas fa-hands-helping"></i>
+        </div>
+        <h4 class="text-xl font-semibold mb-2">Support & Growth</h4>
+        <p class="text-gray-600 text-sm">From candidates to clients, we provide ongoing guidance, mentorship, and tools for growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Leadership -->
+<!-- Leadership -->
+<section class="py-16 px-6 fade-in">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6">Meet Our Leadership</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+      <!-- Asra Sultana - Female Icon -->
+      <div class="bg-gray-50 p-6 rounded shadow hover:scale-105 transition-transform duration-500">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Asra Sultana - Female Icon" class="w-32 h-32 rounded-full mx-auto mb-4" />
+        <h3 class="text-2xl font-semibold mb-1">Asra Sultana</h3>
+        <p class="text-gray-600 mb-3">Founder</p>
+        <p>With a passion for people and progress, Asra leads our vision to redefine recruitment.</p>
+      </div>
+
+      <!-- Mohammed Rifaquation Ali Khan - Male Icon -->
+      <div class="bg-gray-50 p-6 rounded shadow hover:scale-105 transition-transform duration-500">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" alt="Mohammed Rifaquath - Male Icon" class="w-32 h-32 rounded-full mx-auto mb-4" />
+        <h3 class="text-2xl font-semibold mb-1">Mohammed Rifaquath Ali Khan</h3>
+        <p class="text-gray-600 mb-3">Operations Manager</p>
+        <p>Rifaquath brings clarity, quality, and care to every client interaction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials -->
+<section class="bg-gray-100 py-16 fade-in">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-10">What Our Users Say</h2>
+    <div class="testimonial">
+      <p>“AIrecuita helped me land my dream job in under two weeks.”</p>
+      <div class="author">— Aisha Rehman, UX Designer ★★★★★</div>
+    </div>
+    <div class="testimonial">
+      <p>“They matched me with a company that values what I bring to the table.”</p>
+      <div class="author">— Raj Patel, Marketing Strategist ★★★★★</div>
+    </div>
+  </div>
+</section>
+
+<!-- Press Mentions -->
+<section class="py-12 px-6 text-center fade-in">
+  <h2 class="text-4xl font-bold mb-6">As Seen In</h2>
+  <div class="flex justify-center gap-12 flex-wrap">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Forbes_logo.svg" class="h-10 grayscale hover:grayscale-0 transition" alt="Forbes" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/TechCrunch_logo.svg" class="h-10 grayscale hover:grayscale-0 transition" alt="TechCrunch" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Inc._Logo.svg" class="h-10 grayscale hover:grayscale-0 transition" alt="Inc." />
+  </div>
+</section>
+
+<!-- Social Media Carousel -->
+<section class="py-16 bg-white fade-in">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-6">Follow Us on Social Media</h2>
+    <div class="flex justify-center gap-6 text-blue-600 text-3xl mb-10">
+      <a href="https://www.instagram.com/airecruita" target="_blank"><i class="fab fa-instagram hover:text-pink-600"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61578244076358" target="_blank"><i class="fab fa-facebook hover:text-blue-700"></i></a>
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin hover:text-blue-500"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube hover:text-red-600"></i></a>
+    </div>
+    <div class="social-carousel">
+      <iframe src="https://snapwidget.com/embed/1045041" width="320" height="500"></iframe>
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/profile.php?id=61578244076358&tabs=timeline" width="340" height="500" style="border:none;overflow:hidden;" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Counters -->
+<!-- Animated Counters -->
+<section class="py-20 bg-gray-50 fade-in">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-10">Our Impact in Numbers</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Candidates -->
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition">
+        <div class="text-blue-600 text-5xl mb-4">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="counter text-4xl font-bold text-blue-800" id="counter1">0</div>
+        <p class="mt-2 text-lg text-gray-600">Candidates Placed</p>
+      </div>
+
+      <!-- Companies -->
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition">
+        <div class="text-green-600 text-5xl mb-4">
+          <i class="fas fa-building"></i>
+        </div>
+        <div class="counter text-4xl font-bold text-green-800" id="counter2">0</div>
+        <p class="mt-2 text-lg text-gray-600">Companies Served</p>
+      </div>
+
+      <!-- Years -->
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition">
+        <div class="text-purple-600 text-5xl mb-4">
+          <i class="fas fa-award"></i>
+        </div>
+        <div class="counter text-4xl font-bold text-purple-800" id="counter3">0</div>
+        <p class="mt-2 text-lg text-gray-600">Years of Excellence</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA Footer -->
+<footer class="bg-blue-800 text-white text-center py-16">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-4">Let’s Build Your Dream Career</h2>
+    <p class="text-lg mb-6">Start your journey with AIrecuita — where people meet purpose.</p>
+    <a href="/" class="bg-white text-blue-800 px-6 py-3 rounded font-semibold hover:bg-gray-100 inline-block">Get Started</a>
+  </div>
+</footer>
+
+</main>
+
+<!-- Counter Animation Script -->
+<script>
+  function animateCounter(id, target) {
+    let count = 0;
+    const element = document.getElementById(id);
+    const step = target / 100;
+    const interval = setInterval(() => {
+      count += step;
+      if (count >= target) {
+        count = target;
+        clearInterval(interval);
+      }
+      element.textContent = Math.floor(count);
+    }, 30);
+  }
+
+  window.onload = function () {
+    animateCounter("counter1", 15000);
+    animateCounter("counter2", 500);
+    animateCounter("counter3", 1);
+  };
+</script>
+
+
+</body>
+</html>

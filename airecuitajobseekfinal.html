@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIrecuita | Find Your Dream Job</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .hero-bg {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    #progressBar {
+      width: 0%;
+      height: 8px;
+      background-color: #3b82f6;
+      border-radius: 9999px;
+    }
+    body {
+      font-size: 19px;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+<!-- Hero Section -->
+<section class="hero-bg text-white py-20 px-6">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <div class="md:w-1/2 mb-10 md:mb-0">
+      <h1 class="text-6xl font-bold mb-4 leading-tight">Accelerate Your Career with AIrecuita</h1>
+      <p class="text-xl mb-6">Your personalized job matching and career support partner. Explore premium opportunities now.</p>
+      <a href="#job-form" class="bg-white text-blue-700 font-semibold px-6 py-3 rounded-md hover:bg-gray-100 inline-block">Upload Resume</a>
+    </div>
+    <div class="md:w-1/2">
+      <img src="https://img.freepik.com/free-vector/job-interview-illustration_23-2148573772.jpg" alt="Job Search" class="rounded-xl shadow-lg">
+    </div>
+  </div>
+</section>
+
+<!-- Why AIrecuita -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-4">Why Choose AIrecuita?</h2>
+    <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">We’re not just recruiters – we’re your lifelong career success partner, empowering job seekers with the best tools and opportunities.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-blue-50 p-6 rounded-lg shadow text-center">
+        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-rocket"></i></div>
+        <h4 class="text-2xl font-bold mb-2">Tailored Opportunities</h4>
+        <p>We access exclusive roles that aren’t available to the public and match you intelligently.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-lg shadow text-center">
+        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-lightbulb"></i></div>
+        <h4 class="text-2xl font-bold mb-2">Career Expertise</h4>
+        <p>Our specialists understand your domain and champion your career goals effectively.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-lg shadow text-center">
+        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-users"></i></div>
+        <h4 class="text-2xl font-bold mb-2">End-to-End Support</h4>
+        <p>Resume review, interview coaching, and offer negotiation – we guide you completely.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-10">Our 4-Step Hiring Process</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+      <div class="p-6 bg-white rounded-lg shadow">
+        <div class="text-3xl text-blue-600 font-bold mb-2">1</div>
+        <h4 class="font-semibold text-xl mb-1">Create Profile</h4>
+        <p>Register with your details and upload your resume or portfolio.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow">
+        <div class="text-3xl text-blue-600 font-bold mb-2">2</div>
+        <h4 class="font-semibold text-xl mb-1">Consultation</h4>
+        <p>We’ll discuss your goals, preferences, and career plans.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow">
+        <div class="text-3xl text-blue-600 font-bold mb-2">3</div>
+        <h4 class="font-semibold text-xl mb-1">Job Matching</h4>
+        <p>We match you with roles based on your skills and goals.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow">
+        <div class="text-3xl text-blue-600 font-bold mb-2">4</div>
+        <h4 class="font-semibold text-xl mb-1">Placement</h4>
+        <p>We assist with interviews, offers, and onboarding.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Resume Upload Form -->
+<section id="job-form" class="py-16 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <h2 class="text-4xl font-bold text-center mb-10">Get Started – Submit Your Resume</h2>
+    <form class="bg-gray-50 p-8 rounded-lg shadow-md space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" placeholder="Full Name" class="p-3 border border-gray-300 rounded w-full" required>
+        <input type="email" placeholder="Email Address" class="p-3 border border-gray-300 rounded w-full" required>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="tel" placeholder="Phone Number" class="p-3 border border-gray-300 rounded w-full" required>
+        <input type="text" placeholder="LinkedIn Profile URL" class="p-3 border border-gray-300 rounded w-full">
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" placeholder="Current Job Title" class="p-3 border border-gray-300 rounded w-full">
+        <input type="text" placeholder="Preferred Location" class="p-3 border border-gray-300 rounded w-full">
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" placeholder="Years of Experience" class="p-3 border border-gray-300 rounded w-full">
+        <input type="text" placeholder="Skills/Technologies" class="p-3 border border-gray-300 rounded w-full">
+      </div>
+      <textarea placeholder="Brief about your experience or what you're looking for" class="p-3 border border-gray-300 rounded w-full h-32"></textarea>
+      <div class="flex flex-col md:flex-row items-center gap-4">
+        <label class="w-full md:w-auto text-gray-600 font-semibold">Upload Resume:</label>
+        <input type="file" class="w-full md:flex-1 border border-gray-300 rounded p-2" accept=".pdf,.doc,.docx" required>
+      </div>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded font-semibold hover:bg-blue-700 w-full md:w-auto">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- Success Stories -->
+<section class="py-16 bg-gray-100">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-10">Success Stories</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="font-bold text-xl mb-2">Sarah Johnson</h4>
+        <p class="italic text-sm text-gray-500 mb-2">Senior Software Engineer</p>
+        <div class="text-yellow-400 mb-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p>"AIrecuita understood exactly what I wanted. I landed a role that aligns perfectly with my goals."</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="font-bold text-xl mb-2">Michael Chen</h4>
+        <p class="italic text-sm text-gray-500 mb-2">Financial Analyst</p>
+        <div class="text-yellow-400 mb-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+        <p>"My recruiter genuinely cared. I got a job with better pay and culture than I expected!"</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h4 class="font-bold text-xl mb-2">David Rodriguez</h4>
+        <p class="italic text-sm text-gray-500 mb-2">Healthcare Administrator</p>
+        <div class="text-yellow-400 mb-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+        </div>
+        <p>"I was hesitant at first, but AIrecuita opened doors to roles I couldn’t find myself."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer CTA -->
+<section class="py-16 bg-blue-600 text-white text-center">
+  <h2 class="text-3xl font-bold mb-4">Get Hired for Your Dream Job with AIrecuita</h2>
+    <p class="mb-6 max-w-2xl mx-auto">Your future is one step away – Let us help you make the right move.</p>
+  <p class="mb-6 max-w-2xl mx-auto">Join thousands who found their dream job with AIrecuita.</p>
+  <a href="#job-form" class="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100">Get Started</a>
+</section>
+
+<script>
+  function updateProgress() {
+    const bar = document.getElementById('progressBar');
+    bar.style.width = '100%';
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Hire Talent | AI Recruit - Professional Recruitment Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        }
+        .talent-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        .nav-link:hover {
+            color: #3b82f6;
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-blue-600 mr-10">AI Recruit</div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#" class="nav-link text-gray-600 hover:text-blue-500">Home</a>
+                        <a href="#" class="nav-link text-gray-600 hover:text-blue-500">For Employers</a>
+                        <a href="#" class="nav-link text-blue-600 font-medium hover:text-blue-500">For Hire Talent</a>
+                        <a href="#" class="nav-link text-gray-600 hover:text-blue-500">Industries</a>
+                        <a href="#" class="nav-link text-gray-600 hover:text-blue-500">About Us</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="#" class="px-4 py-2 text-blue-600 font-medium hover:bg-blue-50 rounded-md">Login</a>
+                    <a href="#" class="px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition">Register</a>
+                    <button class="md:hidden ml-4 text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Inside the Hero Section -->
+<section class="hero-gradient text-white py-20">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 mb-10 md:mb-0">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Hire Top Talent</h1>
+      <p class="text-xl mb-8">
+        Connect with pre-screened, qualified professionals ready to contribute to your success.
+      </p>
+      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+        <a href="#hiring-form" class="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold text-center hover:bg-gray-100 transition">
+          Post a Job
+        </a>
+        <a href="#contact-section" class="border-2 border-white px-8 py-3 rounded-md font-semibold text-center hover:bg-white hover:text-blue-600 transition">
+          Schedule Consultation
+        </a>
+      </div>
+    </div>
+    <div class="md:w-1/2 flex justify-center">
+      <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80" alt="Career growth" class="rounded-lg shadow-xl w-full max-w-md">
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose AI Recruit? (For Employers) -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-4">Why Choose AI Recruita?</h2>
+    <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+      We’re more than a recruitment agency — we’re your strategic partner for finding exceptional talent quickly and efficiently.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+        <div class="text-blue-600 mb-4">
+          <i class="fas fa-briefcase text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Pre-Vetted Candidates</h3>
+        <p class="text-gray-600">
+          Gain access to a curated pool of professionals who’ve been thoroughly screened for skills, experience, and cultural fit.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+        <div class="text-blue-600 mb-4">
+          <i class="fas fa-cogs text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">AI-Powered Matching</h3>
+        <p class="text-gray-600">
+          Our smart algorithms match your job requirements with the best-fit talent — faster and more accurately.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+        <div class="text-blue-600 mb-4">
+          <i class="fas fa-users text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Dedicated Hiring Support</h3>
+        <p class="text-gray-600">
+          A dedicated recruitment expert will guide you through the hiring process — from sourcing to onboarding.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Talent Categories -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">We Specialize In</h2>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">Finding the perfect match for professionals across these key areas</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="talent-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-6xl text-blue-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Technology</h3>
+                        <p class="text-gray-600 mb-4">Software engineers, data scientists, IT specialists and more.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">View Jobs <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <div class="talent-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-chart-pie text-6xl text-green-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Finance</h3>
+                        <p class="text-gray-600 mb-4">Accountants, financial analysts, investment bankers and more.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">View Jobs <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <div class="talent-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-briefcase-medical text-6xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Healthcare</h3>
+                        <p class="text-gray-600 mb-4">Doctors, nurses, healthcare administrators and more.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">View Jobs <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <div class="talent-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
+                        <i class="fas fa-hammer text-6xl text-yellow-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Engineering</h3>
+                        <p class="text-gray-600 mb-4">Civil, mechanical, electrical engineers and more.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:underline">View Jobs <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-8 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition">View All Categories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+   <!-- How It Works (For Employers) -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-4">How It Works</h2>
+    <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+      Our simple 4-step process to help you hire qualified professionals faster
+    </p>
+
+    <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+      <!-- Step 1 -->
+      <div class="flex flex-col items-center mb-8 md:mb-0 md:w-1/4 px-4">
+        <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mb-4">
+          <span class="text-blue-600 font-bold text-2xl">1</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2 text-center">Submit Your Job Request</h3>
+        <p class="text-gray-600 text-center">Fill out a quick form detailing the roles you're hiring for.</p>
+      </div>
+
+      <!-- Arrow -->
+      <div class="hidden md:block">
+        <i class="fas fa-arrow-right text-gray-400 text-2xl"></i>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flex flex-col items-center mb-8 md:mb-0 md:w-1/4 px-4">
+        <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mb-4">
+          <span class="text-blue-600 font-bold text-2xl">2</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2 text-center">Talent Matching</h3>
+        <p class="text-gray-600 text-center">We scan our database and match the best candidates for your role.</p>
+      </div>
+
+      <!-- Arrow -->
+      <div class="hidden md:block">
+        <i class="fas fa-arrow-right text-gray-400 text-2xl"></i>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex flex-col items-center mb-8 md:mb-0 md:w-1/4 px-4">
+        <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mb-4">
+          <span class="text-blue-600 font-bold text-2xl">3</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2 text-center">Screening & Shortlisting</h3>
+        <p class="text-gray-600 text-center">We vet each candidate through interviews, assessments, and background checks.</p>
+      </div>
+
+      <!-- Arrow -->
+      <div class="hidden md:block">
+        <i class="fas fa-arrow-right text-gray-400 text-2xl"></i>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="flex flex-col items-center md:w-1/4 px-4">
+        <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mb-4">
+          <span class="text-blue-600 font-bold text-2xl">4</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2 text-center">Hire & Onboard</h3>
+        <p class="text-gray-600 text-center">Receive top candidate profiles and start interviews. We'll support you until the role is filled.</p>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="#hiring-form" class="inline-block px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-md font-medium hover:bg-blue-600 hover:text-white transition">
+        Get Started Today
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- Testimonials -->
+   <!-- Success Stories (Employer Testimonials) -->
+<section class="py-16">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-4">Success Stories</h2>
+    <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+      Hear from companies who hired exceptional talent through AI Recruit
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+            <i class="fas fa-building text-blue-600 text-xl"></i>
+          </div>
+          <div>
+            <h4 class="font-bold">Lisa Thompson</h4>
+            <p class="text-gray-600 text-sm">HR Manager, NovaTech</p>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">
+          "AI Recruit delivered highly qualified candidates in just days. Their screening saved us weeks of work and led to one of our best hires this year."
+        </p>
+        <div class="flex text-yellow-400">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+            <i class="fas fa-building text-blue-600 text-xl"></i>
+          </div>
+          <div>
+            <h4 class="font-bold">Rajiv Patel</h4>
+            <p class="text-gray-600 text-sm">Director of Talent, FinEdge Corp</p>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">
+          "We were impressed by how well AI Recruit understood our niche requirements. They brought us candidates that ticked every box — faster than expected."
+        </p>
+        <div class="flex text-yellow-400">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+            <i class="fas fa-building text-blue-600 text-xl"></i>
+          </div>
+          <div>
+            <h4 class="font-bold">Emily Carter</h4>
+            <p class="text-gray-600 text-sm">COO, MedSure Clinics</p>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-4">
+          "From initial consultation to final placement, the process was seamless. AI Recruit became an extension of our hiring team and helped us scale quickly."
+        </p>
+        <div class="flex text-yellow-400">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Hiring Process Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Our Hiring Process</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A streamlined, efficient process designed to get you the right talent quickly</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-blue-600 font-bold text-2xl">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Submit Your Requirements</h3>
+                    <p class="text-gray-600">Tell us about your hiring needs, company culture, and ideal candidate profile.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-blue-600 font-bold text-2xl">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI-Powered Matching</h3>
+                    <p class="text-gray-600">Our advanced algorithms search and match candidates from our extensive talent database.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-blue-600 font-bold text-2xl">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Candidate Screening</h3>
+                    <p class="text-gray-600">We conduct thorough interviews, skill assessments, and background verification.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-blue-600 font-bold text-2xl">04</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Present Top Candidates</h3>
+                    <p class="text-gray-600">Receive detailed profiles of pre-screened candidates ready for your final interview.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Why Choose Our Hiring Solutions?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We combine technology with human expertise to deliver exceptional hiring results</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex items-start bg-gray-50 p-6 rounded-lg">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-bullseye text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Precision Matching</h3>
+                        <p class="text-gray-600">Our system analyzes skills, experience, and cultural fit to find the perfect candidates for your specific needs.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start bg-gray-50 p-6 rounded-lg">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-stopwatch text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Fast Turnaround</h3>
+                        <p class="text-gray-600">Get qualified candidates within 48-72 hours. Our streamlined process ensures quick results without compromising quality.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start bg-gray-50 p-6 rounded-lg">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Quality Guarantee</h3>
+                        <p class="text-gray-600">All candidates undergo rigorous screening, background checks, and skill assessments before being presented to you.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start bg-gray-50 p-6 rounded-lg">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-headset text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Dedicated Support</h3>
+                        <p class="text-gray-600">Your assigned recruitment specialist provides personalized service throughout the entire hiring process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <section class="min-h-screen flex items-center justify-center px-4 my-12">
+    <div class="md:w-1/2 bg-gray-50 p-8 rounded-lg shadow-md">
+      <h3 class="text-2xl font-bold mb-6">Start Your Hiring Journey</h3>
+      <p class="text-gray-600 mb-6">
+        Fill out the form below and we'll connect you with qualified candidates within 48 hours
+      </p>
+      <form class="space-y-4">
+        
+        <!-- Company Name -->
+        <div>
+          <label for="company" class="block text-gray-700 font-medium mb-2">Company Name *</label>
+          <input type="text" id="company" placeholder="Your company name"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Contact Name -->
+        <div>
+          <label for="name" class="block text-gray-700 font-medium mb-2">Contact Name *</label>
+          <input type="text" id="name" placeholder="Your full name"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Email Address -->
+        <div>
+          <label for="email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
+          <input type="email" id="email" placeholder="your.email@company.com"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Phone Number -->
+        <div>
+          <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number *</label>
+          <input type="tel" id="phone" placeholder="(555) 123-4567"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Industry -->
+        <div>
+          <label for="industry" class="block text-gray-700 font-medium mb-2">Industry *</label>
+          <select id="industry"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Select your industry</option>
+            <option value="technology">Technology</option>
+            <option value="finance">Finance</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="engineering">Engineering</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Job Title -->
+        <div>
+          <label for="jobtitle" class="block text-gray-700 font-medium mb-2">Job Title *</label>
+          <input type="text" id="jobtitle" placeholder="e.g., Registered Nurse, Software Developer"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Job Description -->
+        <div>
+          <label for="description" class="block text-gray-700 font-medium mb-2">Job Description *</label>
+          <textarea id="description" rows="4"
+            placeholder="Describe the role, responsibilities, and what you're looking for in a candidate..."
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+        <!-- Key Requirements -->
+        <div>
+          <label for="requirements" class="block text-gray-700 font-medium mb-2">Key Requirements</label>
+          <textarea id="requirements" rows="3"
+            placeholder="List essential skills, experience, certifications, or qualifications..."
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+        <!-- Hiring Urgency -->
+        <div>
+          <label for="urgency" class="block text-gray-700 font-medium mb-2">Hiring Urgency</label>
+          <select id="urgency"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="standard">Standard (1-2 weeks)</option>
+            <option value="urgent">Urgent (3-5 days)</option>
+            <option value="immediate">Immediate (48 hours)</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit"
+          class="w-full bg-blue-600 text-white py-3 rounded-md font-medium hover:bg-blue-700 transition">
+          Submit Hiring Request
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Need Top Talent Fast?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Let our recruitment experts find you the perfect candidates - faster and with better results.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#" class="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition">Register Now</a>
+                <a href="#" class="border-2 border-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-blue-600 transition">Contact a Recruiter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">AI Recruit</h3>
+                    <p class="text-gray-400">Connecting exceptional talent with leading companies since 2010.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">For Candidates</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Browse Jobs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Candidate Resources</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Career Advice</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Register</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">For Employers</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Hire Talent</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Industries We Serve</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Recruitment Solutions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Employer Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i> 123 Recruitment Ave, Suite 500, New York, NY 10001</li>
+                        <li class="flex items-center text-gray-400"><i class="fas fa-phone-alt mr-2"></i> (555) 123-4567</li>
+                        <li class="flex items-center text-gray-400"><i class="fas fa-envelope mr-2"></i> info@airecruit.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2023 AI Recruit. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.md\\:hidden');
+            const mobileMenu = document.querySelector('.md\\:flex');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+                mobileMenu.classList.toggle('flex-col');
+                mobileMenu.classList.toggle('absolute');
+                mobileMenu.classList.toggle('top-16');
+                mobileMenu.classList.toggle('left-0');
+                mobileMenu.classList.toggle('right-0');
+                mobileMenu.classList.toggle('bg-white');
+                mobileMenu.classList.toggle('shadow-md');
+                mobileMenu.classList.toggle('p-4');
+                mobileMenu.classList.toggle('space-y-4');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
